@@ -5,7 +5,7 @@ import { Formik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
-import { forgotPassword } from '../../redux/actions';
+import { setLoading, forgotPassword } from '../../redux/auth-slice';
 import { NotificationManager } from '../../components/common/react-notifications';
 
 const validateEmail = value => {
@@ -23,6 +23,7 @@ const ForgotPassword = ({
   forgotUserMail,
   loading,
   error,
+  setLoadingAction,
   forgotPasswordAction
 }) => {
   const [email] = useState('demo@coloredstrategies.com');
@@ -30,7 +31,8 @@ const ForgotPassword = ({
   const onForgotPassword = values => {
     if (!loading) {
       if (values.email !== '') {
-        forgotPasswordAction(values, history);
+        setLoadingAction();
+        forgotPasswordAction({ user: values, history });
       }
     }
   };
@@ -137,5 +139,6 @@ const mapStateToProps = ({ authUser }) => {
 };
 
 export default connect(mapStateToProps, {
+  setLoadingAction: setLoading,
   forgotPasswordAction: forgotPassword
 })(ForgotPassword);

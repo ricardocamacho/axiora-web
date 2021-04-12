@@ -5,7 +5,7 @@ import { Formik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
-import { resetPassword } from '../../redux/actions';
+import { setLoading, resetPassword } from '../../redux/auth-slice';
 import { NotificationManager } from '../../components/common/react-notifications';
 
 const validateNewPassword = values => {
@@ -22,6 +22,7 @@ const ResetPassword = ({
   history,
   loading,
   error,
+  setLoadingAction,
   resetPasswordAction
 }) => {
   const [newPassword] = useState('');
@@ -54,6 +55,7 @@ const ResetPassword = ({
       const oobCode = params.get('oobCode');
       if (oobCode) {
         if (values.newPassword !== '') {
+          setLoadingAction();
           resetPasswordAction({
             newPassword: values.newPassword,
             resetPasswordCode: oobCode,
@@ -168,5 +170,6 @@ const mapStateToProps = ({ authUser }) => {
 };
 
 export default connect(mapStateToProps, {
+  setLoadingAction: setLoading,
   resetPasswordAction: resetPassword
 })(ResetPassword);

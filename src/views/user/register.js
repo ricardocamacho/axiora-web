@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { registerUser } from '../../redux/actions';
+import { registerUser } from '../../redux/auth-slice';
 
 import IntlMessages from '../../helpers/IntlMessages';
 import { Colxx } from '../../components/common/CustomBootstrap';

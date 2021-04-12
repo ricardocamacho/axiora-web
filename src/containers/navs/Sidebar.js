@@ -14,7 +14,7 @@ import {
   addContainerClassname,
   changeDefaultClassnames,
   changeSelectedMenuHasSubItems
-} from '../../redux/actions';
+} from '../../redux/menu-slice';
 
 import menuItems from '../../constants/menu';
 

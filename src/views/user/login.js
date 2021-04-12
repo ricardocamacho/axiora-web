@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 import { NotificationManager } from '../../components/common/react-notifications';
 
-import { loginUser } from '../../redux/actions';
+import { setLoading, loginUser } from '../../redux/auth-slice';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
 
@@ -30,7 +30,13 @@ const validateEmail = value => {
   return error;
 };
 
-const Login = ({ history, loading, error, loginUserAction }) => {
+const Login = ({
+  history,
+  loading,
+  error,
+  setLoadingAction,
+  loginUserAction
+}) => {
   const [email] = useState('demo@gogo.com');
   const [password] = useState('gogo123');
 
@@ -43,7 +49,8 @@ const Login = ({ history, loading, error, loginUserAction }) => {
   const onUserLogin = values => {
     if (!loading) {
       if (values.email !== '' && values.password !== '') {
-        loginUserAction(values, history);
+        setLoadingAction();
+        loginUserAction({ user: values, history });
       }
     }
   };
@@ -144,5 +151,6 @@ const mapStateToProps = ({ authUser }) => {
 };
 
 export default connect(mapStateToProps, {
+  setLoadingAction: setLoading,
   loginUserAction: loginUser
 })(Login);

@@ -16,12 +16,13 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import IntlMessages from '../../helpers/IntlMessages';
+
 import {
   setContainerClassnames,
-  clickOnMobileMenu,
-  logoutUser,
-  changeLocale
-} from '../../redux/actions';
+  clickOnMobileMenu
+} from '../../redux/menu-slice';
+import { logoutUser } from '../../redux/auth-slice';
+import { changeLocale } from '../../redux/settings-slice';
 
 import {
   menuHiddenBreakpoint,

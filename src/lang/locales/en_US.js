@@ -27,6 +27,9 @@ module.exports = {
   'user.login-button': 'LOGIN',
   'user.register-button': 'REGISTER',
   'user.reset-password-button': 'RESET',
+  'user.new-password-again': 'New Password Again',
+  'user.new-password': 'New Password',
+  'user.reset-password': 'Reset Password',
   'user.buy': 'BUY',
   'user.username': 'Username',
 
