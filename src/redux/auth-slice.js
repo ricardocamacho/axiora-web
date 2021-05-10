@@ -4,16 +4,20 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { adminRoot, currentUser } from '../constants/defaultValues';
 import { getCurrentUser, setCurrentUser } from '../helpers/Utils';
 import { auth } from '../helpers/Firebase';
+import Api from '../helpers/api';
 
-const isAuthGuardActive = true;
+const api = new Api();
+
+const isAuthGuardActive = false;
 
 export const loginUser = createAsyncThunk(
   'users/loginUserStatus',
   async ({ user, history }) => {
-    await auth.signInWithEmailAndPassword(user.email, user.password);
-    setCurrentUser(currentUser);
+    const userResponse = await api.loginUser(user.email, user.password);
+    const loggedUser = { ...currentUser, ...userResponse };
+    setCurrentUser(loggedUser);
     history.push(adminRoot);
-    return currentUser;
+    return loggedUser;
   }
 );
 
@@ -95,7 +99,7 @@ const authUserSlice = createSlice({
     [loginUser.rejected]: (state, action) => {
       state.loading = false;
       state.currentUser = null;
-      state.error = action.error && action.error.message;
+      state.error = action.error && 'Usuario y/o contraseña inválida';
     },
     [forgotPassword.fulfilled]: (state, action) => {
       state.loading = false;

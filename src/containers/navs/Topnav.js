@@ -47,6 +47,7 @@ const TopNav = ({
   menuClickCount,
   selectedMenuHasSubItems,
   locale,
+  authUser,
   setContainerClassnamesAction,
   clickOnMobileMenuAction,
   logoutUserAction,
@@ -297,10 +298,17 @@ const TopNav = ({
         <div className="user d-inline-block">
           <UncontrolledDropdown className="dropdown-menu-right">
             <DropdownToggle className="p-0" color="empty">
-              <span className="name mr-1">Sarah Kortney</span>
-              <span>
-                <img alt="Profile" src="/assets/img/profiles/l-1.jpg" />
+              <span className="name mr-1">
+                {authUser.currentUser && authUser.currentUser.email}
               </span>
+              {authUser.currentUser && (
+                <span>
+                  <img
+                    alt="Profile"
+                    src={`https://ui-avatars.com/api/?name=${authUser.currentUser.email}`}
+                  />
+                </span>
+              )}
             </DropdownToggle>
             <DropdownMenu className="mt-3" right>
               <DropdownItem>Account</DropdownItem>
@@ -319,14 +327,15 @@ const TopNav = ({
   );
 };
 
-const mapStateToProps = ({ menu, settings }) => {
+const mapStateToProps = ({ menu, settings, authUser }) => {
   const { containerClassnames, menuClickCount, selectedMenuHasSubItems } = menu;
   const { locale } = settings;
   return {
     containerClassnames,
     menuClickCount,
     selectedMenuHasSubItems,
-    locale
+    locale,
+    authUser
   };
 };
 export default injectIntl(
