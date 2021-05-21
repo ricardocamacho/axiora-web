@@ -22,6 +22,11 @@ class Api {
     return instance;
   }
 
+  async signUp(email, password) {
+    const response = await this.axioraApi.post('/sign-up', { email, password });
+    return response.data;
+  }
+
   async loginUser(email, password) {
     const response = await this.axioraApi.post('/sign-in', { email, password });
     return response.data;

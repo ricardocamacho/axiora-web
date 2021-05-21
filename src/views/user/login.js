@@ -13,9 +13,9 @@ import IntlMessages from '../../helpers/IntlMessages';
 const validatePassword = value => {
   let error;
   if (!value) {
-    error = 'Please enter your password';
+    error = 'Por favor ingresa tu contraseña';
   } else if (value.length < 4) {
-    error = 'Value must be longer than 3 characters';
+    error = 'La contraseña debe tener más de 3 caracteres';
   }
   return error;
 };
@@ -23,9 +23,9 @@ const validatePassword = value => {
 const validateEmail = value => {
   let error;
   if (!value) {
-    error = 'Please enter your email address';
+    error = 'Por favor ingresa tu email';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = 'Invalid email address';
+    error = 'Email inválido';
   }
   return error;
 };
@@ -37,12 +37,12 @@ const Login = ({
   setLoadingAction,
   loginUserAction
 }) => {
-  const [email] = useState('demo@gogo.com');
-  const [password] = useState('gogo123');
+  const [email] = useState('');
+  const [password] = useState('');
 
   useEffect(() => {
     if (error) {
-      NotificationManager.warning(error, 'Login Error', 3000, null, null, '');
+      NotificationManager.warning(error, 'Oops', 3000, null, null, '');
     }
   }, [error]);
 
@@ -62,13 +62,13 @@ const Login = ({
       <Colxx xxs="12" md="10" className="mx-auto my-auto">
         <Card className="auth-card">
           <div className="position-relative image-side ">
-            <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
+            <p className="text-white h2">AXIORA</p>
             <p className="white mb-0">
-              Please use your credentials to login.
+              <IntlMessages id="user.login-instructions" />
               <br />
-              If you are not a member, please{' '}
+              Si aún no eres miembro, por favor{' '}
               <NavLink to="/user/register" className="white">
-                register
+                Regístrate
               </NavLink>
               .
             </p>
@@ -116,9 +116,10 @@ const Login = ({
                     )}
                   </FormGroup>
                   <div className="d-flex justify-content-between align-items-center">
-                    <NavLink to="/user/forgot-password">
+                    {/* <NavLink to="/user/forgot-password">
                       <IntlMessages id="user.forgot-password-question" />
-                    </NavLink>
+                    </NavLink> */}
+                    <NavLink to="/user/register">Regístrate</NavLink>
                     <Button
                       color="primary"
                       className={`btn-shadow btn-multiple-state ${

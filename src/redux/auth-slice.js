@@ -49,17 +49,15 @@ export const resetPassword = createAsyncThunk(
 export const registerUser = createAsyncThunk(
   'users/registerUserStatus',
   async ({ email, password, history }) => {
-    const registerUserResponse = await auth.createUserWithEmailAndPassword(
-      email,
-      password
-    );
-    if (!registerUserResponse.message) {
-      const item = { uid: registerUserResponse.user.uid, ...currentUser };
-      setCurrentUser(item);
-      history.push(adminRoot);
-      return item;
-    }
-    return registerUserResponse.message;
+    const registerUserResponse = await api.signUp(email, password);
+    const item = {
+      email: registerUserResponse.email,
+      token: registerUserResponse.token,
+      ...currentUser
+    };
+    setCurrentUser(item);
+    history.push(adminRoot);
+    return item;
   }
 );
 
@@ -131,7 +129,7 @@ const authUserSlice = createSlice({
     [registerUser.rejected]: (state, action) => {
       state.loading = false;
       state.currentUser = null;
-      state.error = action.payload;
+      state.error = action.error && 'Este usuario ya existe';
     }
   }
 });

@@ -152,8 +152,8 @@ export const getCurrentUser = () => {
   let user = null;
   try {
     user =
-      localStorage.getItem('gogo_current_user') != null
-        ? JSON.parse(localStorage.getItem('gogo_current_user'))
+      localStorage.getItem('axiora_current_user') != null
+        ? JSON.parse(localStorage.getItem('axiora_current_user'))
         : null;
   } catch (error) {
     console.log('>>>>: src/helpers/Utils.js  : getCurrentUser -> error', error);
@@ -165,9 +165,9 @@ export const getCurrentUser = () => {
 export const setCurrentUser = user => {
   try {
     if (user) {
-      localStorage.setItem('gogo_current_user', JSON.stringify(user));
+      localStorage.setItem('axiora_current_user', JSON.stringify(user));
     } else {
-      localStorage.removeItem('gogo_current_user');
+      localStorage.removeItem('axiora_current_user');
     }
   } catch (error) {
     console.log('>>>>: src/helpers/Utils.js : setCurrentUser -> error', error);

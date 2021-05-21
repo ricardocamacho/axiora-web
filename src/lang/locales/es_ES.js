@@ -10,22 +10,24 @@ Table of Contents
 
 module.exports = {
   /* 01.General */
-  'general.copyright': 'Gogo React © Todos los derechos reservados.',
+  'general.copyright': 'Axiora © Todos los derechos reservados.',
 
   'unauthorized.title': 'Unauthorized Access Attempt',
   'unauthorized.detail':
     'You are not authorized to view the page you are trying to access.',
 
   /* 02.Inicio de sesión de usuario, cierre de sesión, registro */
+  'user.login-instructions':
+    'Por favor ingresa tus credenciales para ingresar.',
   'user.login-title': 'Iniciar sesión',
   'user.register': 'Registro',
   'user.forgot-password': 'Se te olvidó tu contraseña',
   'user.email': 'Email',
   'user.password': 'Contraseña',
-  'user.forgot-password-question': '¿Contraseña olvidada?',
+  'user.forgot-password-question': '¿Olvidaste tu contraseña?',
   'user.fullname': 'Nombre completo',
   'user.login-button': 'INICIAR SESIÓN',
-  'user.register-button': 'REGISTRO',
+  'user.register-button': 'REGÍSTRATE',
   'user.reset-password-button': 'REINICIAR',
   'user.buy': 'COMPRAR',
   'user.username': 'Nombre de Usuario',

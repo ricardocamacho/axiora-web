@@ -317,7 +317,7 @@ const TopNav = ({
               <DropdownItem>Support</DropdownItem>
               <DropdownItem divider />
               <DropdownItem onClick={() => handleLogout()}>
-                Sign out
+                Cerrar sesión
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
