@@ -15,6 +15,7 @@ export const loginUser = createAsyncThunk(
   async ({ user, history }) => {
     const userResponse = await api.loginUser(user.email, user.password);
     const loggedUser = { ...currentUser, ...userResponse };
+    api.setToken(userResponse.token);
     setCurrentUser(loggedUser);
     history.push(adminRoot);
     return loggedUser;
@@ -60,6 +61,11 @@ export const registerUser = createAsyncThunk(
     return item;
   }
 );
+
+const user = getCurrentUser();
+if (user && user.token) {
+  api.setToken(user.token);
+}
 
 const authUserSlice = createSlice({
   name: 'authUser',

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseUrl = {
-  development: 'https://bcq3petmyf.execute-api.us-east-2.amazonaws.com/dev',
+  development: 'http://localhost:8080',
   production: 'https://bcq3petmyf.execute-api.us-east-2.amazonaws.com/dev'
 };
 
@@ -22,6 +22,10 @@ class Api {
     return instance;
   }
 
+  setToken(token) {
+    this.axioraApi.defaults.headers.common.Authorization = `Bearer ${token}`;
+  }
+
   async signUp(email, password) {
     const response = await this.axioraApi.post('/sign-up', { email, password });
     return response.data;
@@ -29,6 +33,20 @@ class Api {
 
   async loginUser(email, password) {
     const response = await this.axioraApi.post('/sign-in', { email, password });
+    return response.data;
+  }
+
+  async getStores() {
+    const response = await this.axioraApi.get('/stores');
+    return response.data;
+  }
+
+  async addStore(meliUserId, code, redirectUri) {
+    const response = await this.axioraApi.post('/mercadolibre/store', {
+      meliUserId,
+      code,
+      redirectUri
+    });
     return response.data;
   }
 }
