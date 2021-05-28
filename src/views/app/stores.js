@@ -10,7 +10,16 @@ import Breadcrumb from '../../containers/navs/Breadcrumb';
 import Api from '../../helpers/api';
 
 const api = new Api();
-const redirectUri = 'https://axiora-dev.s3-website.us-east-2.amazonaws.com';
+
+const clientId = {
+  developmment: 2767226127359503,
+  production: 2896786402503359
+};
+
+const redirectUri = {
+  development: 'https://dev.axiora.co/app/stores',
+  production: 'https://axiora.co/app/stores'
+};
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -28,7 +37,9 @@ const Stores = ({ match }) => {
   const code = query.get('code');
 
   const addStore = () => {
-    window.location.href = `http://auth.mercadolibre.com.co/authorization?response_type=code&client_id=2767226127359503&redirect_uri=${redirectUri}`;
+    window.location.href = `http://auth.mercadolibre.com.co/authorization?response_type=code&client_id=${
+      clientId[process.env.REACT_APP_ENV]
+    }&redirect_uri=${redirectUri[process.env.REACT_APP_ENV]}`;
   };
 
   useEffect(() => {
