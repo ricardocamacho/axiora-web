@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const baseUrl = {
-  development: 'http://localhost:8080',
-  production: 'https://bcq3petmyf.execute-api.us-east-2.amazonaws.com/dev'
+  development: 'https://bcq3petmyf.execute-api.us-east-2.amazonaws.com/dev',
+  production: 'https://ssa61tzph4.execute-api.us-east-2.amazonaws.com/prod'
 };
 
 // Singleton instance
@@ -12,7 +12,7 @@ class Api {
   constructor() {
     if (!instance) {
       this.axioraApi = axios.create({
-        baseURL: baseUrl[process.env.NODE_ENV],
+        baseURL: baseUrl[process.env.REACT_APP_ENV],
         headers: {
           'Content-Type': 'application/json'
         }
