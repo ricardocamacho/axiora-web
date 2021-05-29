@@ -12,7 +12,7 @@ import Api from '../../helpers/api';
 const api = new Api();
 
 const clientId = {
-  developmment: 2767226127359503,
+  development: 2767226127359503,
   production: 2896786402503359
 };
 
