@@ -61,7 +61,7 @@ const Stores = ({ match }) => {
           );
         } else {
           await api.addStore(
-            meliUserId,
+            Number(meliUserId),
             code,
             redirectUri[process.env.REACT_APP_ENV]
           );
