@@ -60,7 +60,11 @@ const Stores = ({ match }) => {
             ''
           );
         } else {
-          await api.addStore(meliUserId, code, redirectUri);
+          await api.addStore(
+            meliUserId,
+            code,
+            redirectUri[process.env.REACT_APP_ENV]
+          );
           const data = await api.getStores();
           setStores(data);
         }
