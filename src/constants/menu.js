@@ -3,9 +3,15 @@ import { adminRoot } from './defaultValues';
 const data = [
   {
     id: 'stores',
-    icon: 'iconsminds-bucket',
+    icon: 'iconsminds-shop',
     label: 'menu.stores',
     to: `${adminRoot}/stores`
+  },
+  {
+    id: 'inventory',
+    icon: 'iconsminds-box-full',
+    label: 'menu.inventory',
+    to: `${adminRoot}/inventory`
   }
   // {
   //   id: 'gogo',

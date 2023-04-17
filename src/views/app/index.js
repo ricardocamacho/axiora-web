@@ -17,6 +17,9 @@ const BlankPage = React.lazy(() =>
 const Stores = React.lazy(() =>
   import(/* webpackChunkName: "viwes-blank-page" */ './stores')
 );
+const Inventory = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-blank-page" */ './inventory')
+);
 
 const App = ({ match }) => {
   return (
@@ -25,10 +28,10 @@ const App = ({ match }) => {
         <Suspense fallback={<div className="loading" />}>
           <Switch>
             <Redirect exact from={`${match.url}/`} to={`${match.url}/stores`} />
-            {/* <Route
+            <Route
               path={`${match.url}/inventory`}
               render={props => <Inventory {...props} />}
-            /> */}
+            />
             <Route
               path={`${match.url}/stores`}
               render={props => <Stores {...props} />}

@@ -49,6 +49,11 @@ class Api {
     });
     return response.data;
   }
+
+  async updateInventory(sku, quantity) {
+    const response = await this.axioraApi.put('/inventory', { sku, quantity });
+    return response.data;
+  }
 }
 
 export default Api;

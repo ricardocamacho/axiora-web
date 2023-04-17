@@ -49,6 +49,7 @@ module.exports = {
   'menu.docs': 'Docs',
   'menu.blank-page': 'Blank Page',
   'menu.stores': 'Cuentas',
+  'menu.inventory': 'Inventario',
 
   /* 04.Error  */
   'layouts.error-title': 'Vaya, parece que ha ocurrido un error!',

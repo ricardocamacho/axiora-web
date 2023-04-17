@@ -99,7 +99,7 @@ const Stores = ({ match }) => {
       <Row>
         <Colxx xxs="12" className="mb-4">
           <Button color="primary" className="mb-2" onClick={addStore}>
-            Agregar cuenta
+            Agregar cuenta de Mercadolibre
           </Button>
           <Row>
             <Colxx xxs="12">
