@@ -3,26 +3,22 @@ version: 0.2
 phases:
   install:
     commands:
-      # Install Node 13
-      - echo Installing node 13...
+      # Install Node 14
+      - echo Installing node 14...
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - curl -sL https://deb.nodesource.com/setup_14.x | bash -
       - apt install -y nodejs
-      # Install Yarn
-      - echo Installing yarn...
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-      - apt install --no-install-recommends yarn
   pre_build:
     commands:
       # Install dependencies
       - echo Installing dependencies...
-      - yarn
+      - npm install
   build:
     commands:
       # tests
       # build
       - echo Building...
-      - yarn build
+      - npm run build
 artifacts:
   files:
     - '**/*'
