@@ -26,7 +26,8 @@ function useQuery() {
 }
 
 const channels = {
-  mercadolibre: 'Mercadolibre'
+  mercadolibre: 'Mercadolibre',
+  shopify: 'Shopify'
 };
 
 const Stores = ({ match }) => {
@@ -98,9 +99,15 @@ const Stores = ({ match }) => {
       </Row>
       <Row>
         <Colxx xxs="12" className="mb-4">
-          <Button color="primary" className="mb-2" onClick={addStore}>
+          <Button color="primary" className="mb-3" onClick={addStore}>
             Agregar cuenta de Mercadolibre
           </Button>
+          <p className="mb-4">
+            Para agregar una cuenta de Shopify por favor{' '}
+            <a href="https://api.whatsapp.com/send/?phone=573177030039">
+              contáctanos
+            </a>
+          </p>
           <Row>
             <Colxx xxs="12">
               {stores &&
@@ -109,17 +116,15 @@ const Stores = ({ match }) => {
                     <NavLink to="#" location={{}} className="d-flex">
                       <img
                         alt="Thumbnail"
-                        src="/assets/img/mercadolibre-logo.svg"
+                        src={`/assets/img/${store.channel}-logo.svg`}
                         className="list-thumbnail responsive border-0 card-img-left"
                       />
                     </NavLink>
                     <div className="pl-2 d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
-                        <NavLink to="#" location={{}} className="w-40 w-sm-100">
-                          <p className="list-item-heading mb-1 truncate">
-                            {store.data.name}
-                          </p>
-                        </NavLink>
+                        <p className="list-item-heading mb-1 truncate w-40 w-sm-100">
+                          {store.data.name}
+                        </p>
                         <p className="mb-1 text-muted text-small w-15 w-sm-100">
                           {channels[store.channel]}
                         </p>

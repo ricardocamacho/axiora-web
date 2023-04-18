@@ -80,6 +80,9 @@ const Inventory = ({ match }) => {
       </Row>
       <Row>
         <Colxx xxs="12" className="mb-4">
+          <p className="mb-4">
+            Actualice el inventario en todas sus cuentas vinculadas
+          </p>
           <Card>
             <CardBody>
               <Formik
