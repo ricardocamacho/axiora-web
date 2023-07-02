@@ -217,24 +217,6 @@ const Home = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a
-              className="c-pointer"
-              href="#scroll"
-              onClick={event => scrollTo(event, 'components')}
-            >
-              COMPONENTS
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="c-pointer"
-              href="#scroll"
-              onClick={event => scrollTo(event, 'apps')}
-            >
-              APPS
-            </a>
-          </li>
-          <li className="nav-item">
             <div className="separator" />
           </li>
           <li className="nav-item text-center">
@@ -520,7 +502,7 @@ const Home = () => {
                     <img
                       className="footer-logo"
                       alt="footer logo"
-                      src="/assets/logos/white-full.svg"
+                      src="/assets/logos/white-full-axiora.svg"
                     />
                   </a>
                 </div>

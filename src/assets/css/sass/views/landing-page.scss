@@ -30,8 +30,8 @@
     height: unset;
     span {
       display: inline-block;
-      width: 100px;
-      height: 30px;
+      width: 120px;
+      height: 32px;
       background: url($lp-logo-path-pinned);
       background-repeat: no-repeat;
     }
@@ -150,13 +150,13 @@
       @include respond-below(lg) {
         height: $navbar-height-md;
         .navbar-logo {
-          width: 100px;
-          height: 30px;
+          width: 120px;
+          height: 32px;
 
           .white,
           .dark {
-            width: 100px;
-            height: 30px;
+            width: 120px;
+            height: 32px;
           }
         }
       }
