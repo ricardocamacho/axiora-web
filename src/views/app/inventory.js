@@ -28,11 +28,17 @@ const Inventory = ({ match }) => {
     if (response.mercadolibre) {
       response.mercadolibre.forEach(store => {
         store.forEach(item => {
-          const updated = item.variations.some(variation => variation.updated);
+          const updated =
+            item.updated ||
+            item.variations?.some(variation => variation.updated);
           alerts.push({
             color: updated ? 'success' : 'danger',
             message: `Item de Mercadolibre con ID ${item.id} ${
-              updated ? 'fue actualizado' : 'no pudo ser actualizado'
+              updated
+                ? 'fue actualizado'
+                : `no pudo ser actualizado${
+                    item.reason ? ` (${item.reason})` : ''
+                  }`
             }`
           });
         });
@@ -140,7 +146,7 @@ const Inventory = ({ match }) => {
                   {results !== null && results.length > 0
                     ? results.map((result, idx) => (
                         // eslint-disable-next-line react/no-array-index-key
-                        <Alert color="success" key={idx}>
+                        <Alert color={result.color} key={idx}>
                           {result.message}
                         </Alert>
                       ))
