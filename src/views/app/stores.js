@@ -12,8 +12,8 @@ import Api from '../../helpers/api';
 const api = new Api();
 
 const clientId = {
-  development: 2767226127359503,
-  production: 2896786402503359
+  development: 2954505467143724,
+  production: 2954505467143724
 };
 
 const redirectUri = {
