@@ -56,7 +56,7 @@ const slideItems = [
 const features = [
   {
     title: 'Conecta múltiples cuentas',
-    img: '/assets/img/landing-page/features/plesant-design.png',
+    img: '/assets/img/landing-page/features/conecta-cuentas.png',
     detail: `Conecta y sincroniza varias cuentas de la misma o diferentes plataformas: puedes conectar las cuentas que desees de los diferentes canales (Mercadolibre y Shopify).<br /><br />
       Ejemplo 1: conecta <strong>1</strong> cuenta de <strong>Mercadolibre</strong> y <strong>1</strong> cuenta de <strong>Shopify</strong>.<br /><br />
       Ejemplo 2: conecta <strong>2</strong> cuentas de <strong>Mercadolibre</strong>.<br /><br />
@@ -64,7 +64,7 @@ const features = [
   },
   {
     title: 'Conecta múltiples publicaciones / productos',
-    img: '/assets/img/landing-page/features/extra-responsive.png',
+    img: '/assets/img/landing-page/features/conecta-publicaciones.png',
     detail: `&iquest;Vendes los mismos productos en diferentes publicaciones?<br /><br />
       Si sabes lo importante que es el SEO y el posicionamiento, sabes lo importante que es tener buenos títulos en tus publicaciones / productos.<br /><br />
       Ejemplo: si vendes autopartes o repuestos de carros, puede que un mismo repuesto le sirva a diferentes carros y modelos, y puede que tengas distintas publicaciones (con diferentes títulos para un mejor SEO) que hacen referencia al mismo producto.<br /><br />
@@ -72,13 +72,13 @@ const features = [
   },
   {
     title: 'Inventario sincronizado',
-    img: '/assets/img/landing-page/features/superfine-charts.png',
+    img: '/assets/img/landing-page/features/sincroniza-inventario.png',
     detail: `Con Axiora, actualiza tu inventario en nuestra plataforma (web o mobile).<br /><br />
       Utiliza nuestro módulo de Inventario, ingresa el SKU, la cantidad, y el stock de todas tus publicaciones y productos en todas tus cuentas asociadas cambiará automáticamente.`
   },
   {
     title: 'Gestiona preguntas y respuestas (pronto)',
-    img: '/assets/img/landing-page/features/layouts-for-the-job.png',
+    img: '/assets/img/landing-page/features/gestiona-preguntas.png',
     detail: `Muy pronto, podrás gestionar preguntas y respuestas de todas tus cuentas asociadas de Mercadolibre`
   }
 ];
