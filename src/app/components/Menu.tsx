@@ -1,0 +1,45 @@
+'use client'
+
+
+import { useState } from "react";
+import { RiMenuLine, RiCloseLine } from "react-icons/ri";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../styles/index.module.scss";
+
+const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <header className={styles.menu}>
+      <picture>
+        <Image src="https://e7.pngegg.com/pngimages/339/69/png-clipart-god-of-war-iii-god-of-war-ghost-of-sparta-ultimate-marvel-vs-capcom-3-god-text-logo.png" alt="logo" width={150} height={20} />
+      </picture>
+
+      <nav className={isOpen ? styles.navOpen : styles.open}>
+        <ul>
+          <li>
+            <Link href={"#"}>Características</Link>
+          </li>
+          <li>
+            <Link href={"#"}>Planes</Link>
+          </li>
+          <li>
+            <Link href={"#"}>Ingresar</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <button onClick={handleToggle}>
+        {isOpen ? <RiCloseLine className={styles.icon} /> : <RiMenuLine className={styles.icon} />}
+      </button>
+    </header>
+  );
+};
+
+export default Menu;
+
