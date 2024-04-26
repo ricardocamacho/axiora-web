@@ -1,0 +1,26 @@
+[
+    {
+        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "plan": "LITE",
+        "h2": "GRATIS",
+        "paragraph": "Hasta 500 USD en facturación por mes (de tus productos sincronizados)",
+        "párrafo": "Sincronización de ventas e inventario Actualizaciones gratuitas",
+        "nameBtn": "EMPEZAR >"
+    },
+    {
+        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "plan": "BASIC",
+        "h2": "$9",
+        "paragraph": "Mes / Hasta 1000 USD en facturación por mes (de tus productos sincronizados)",
+        "párrafo": "Sincronización de ventas e inventario Actualizaciones gratuitas Soporte L-V 9am-5pm Eastern Time",
+        "nameBtn": "COMPRAR >"
+    },
+    {
+        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "plan": "PLUS",
+        "h2": "$19",
+        "paragraph": "Mes / Facturación ilimitada",
+        "párrafo": "Sincronización de ventas e inventario Actualizaciones gratuitas Soporte 24/7",
+        "nameBtn": "COMPRAR >"
+    }
+]
