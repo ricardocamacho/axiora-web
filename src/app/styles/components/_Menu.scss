@@ -65,7 +65,7 @@
         
     }
 
-    & .open {
+    & .navClosed {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,6 +76,7 @@
         top: 90px;
         left: 150%;
         scale: .3;
+        transform: rotateY(90deg);
         opacity: 0;
         background: #ffffff;
         transition: .5s ease-in-out;

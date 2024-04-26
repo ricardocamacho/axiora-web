@@ -1,0 +1,29 @@
+[
+    {
+        "image": "/landing-page/features/conecta-cuentas.png",
+        "h3": "Conecta múltiples cuentas",
+        "paragraph": "Conecta y sincroniza varias cuentas de la misma o diferentes plataformas: puedes conectar las cuentas que desees de los diferentes canales (Mercadolibre y Shopify) '  ",
+        "one": "Ejemplo 1: conecta 1 cuenta de Mercadolibre y 1 cuenta de Shopify.",
+        "two": "Ejemplo 2: conecta 2 cuentas de Mercadolibre.",
+        "three": "Ejemplo 3: conecta 2 cuentas de Mercadolibre y 1 de Shopify."
+    },
+    {
+        "image": "/landing-page/features/conecta-publicaciones.png",
+        "h3": "Conecta múltiples publicaciones / productos",
+        "paragraph": "¿Vendes los mismos productos en diferentes publicaciones?",
+        "one": "Si sabes lo importante que es el SEO y el posicionamiento, sabes lo importante que es tener buenos títulos en tus publicaciones / productos.",
+        "two": "Ejemplo: si vendes autopartes o repuestos de carros, puede que un mismo repuesto le sirva a diferentes carros y modelos, y puede que tengas distintas publicaciones (con diferentes títulos para un mejor SEO) que hacen referencia al mismo producto.",
+        "three": "Si este es tu caso, con Axiora puedes crear varias publicaciones con diferentes títulos, haciendo referencia a un mismo producto, manteniendo el inventario del mismo, sincronizado."
+    },
+    {
+        "image": "/landing-page/features/sincroniza-inventario.png",
+        "h3": "Inventario sincronizado",
+        "paragraph": "Con Axiora, actualiza tu inventario en nuestra plataforma (web o mobile).",
+        "one": "Utiliza nuestro módulo de Inventario, ingresa el SKU, la cantidad, y el stock de todas tus publicaciones y productos en todas tus cuentas asociadas cambiará automáticamente."
+    },
+    {
+        "image": "/landing-page/features/gestiona-preguntas.png",
+        "h3": "Gestiona preguntas y respuestas (pronto)",
+        "paragraph": "Muy pronto, podrás gestionar preguntas y respuestas de todas tus cuentas asociadas de Mercadolibre"
+    }
+]

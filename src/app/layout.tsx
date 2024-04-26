@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Menu from "./components/Menu";
 import { nunito } from "./fonts";
+import { MenuProvider } from "./context/MenuContext";
 
 
 export const metadata: Metadata = {
@@ -16,9 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <MenuProvider>
       <body className={nunito.className}>
-        <Menu />
         {children}</body>
+      </MenuProvider>
     </html>
   );
 }
