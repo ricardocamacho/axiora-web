@@ -1,5 +1,16 @@
+import Link from "next/link"
+
 export default function dashboard(){
     return (
-        <h1 className="flex justify-center text-3xl">dashboard</h1>
+        <div>
+            <nav className="bg-blue-500 flex justify-end">
+                <ul className="flex-col">
+                    <li>User name</li>
+                    <Link href="/signin">
+                        cerrar sesión
+                    </Link>
+                </ul>
+            </nav>
+        </div>
     )
   };
