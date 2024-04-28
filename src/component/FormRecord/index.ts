@@ -1,0 +1,1 @@
+export { MyFormRecord } from "./MyFormRecord"
