@@ -17,7 +17,6 @@ export default function Home() {
     <DynamicSlider />
     <br></br>
     <DynamicCaracteristicas data={[]} />
-    <br></br>
     <DynamicPlan data={[]} />
     <br></br>
     <Dynamicwelcome />

@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/index.module.scss";
 
+
 interface MenuProps {}
 
 const Menu: React.FC<MenuProps>  = () => {
