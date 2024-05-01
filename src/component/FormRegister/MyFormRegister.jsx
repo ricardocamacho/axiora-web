@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "../FormSignIn/module.css"
 
-export const MyFormRecord = () => {
+export const MyFormRegister = () => {
   return (
     <form className="form-container">
       <div>
@@ -18,7 +18,7 @@ export const MyFormRecord = () => {
         <input type="password" id="password" name="password" />
       </div>
       <div className="links">
-          <Link href="/record" className="record"></Link>
+          <Link href="/register" className="record"></Link>
         <button>
           <Link href="/dashboard">
             Regístrate

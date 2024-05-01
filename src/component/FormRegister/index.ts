@@ -1,0 +1,1 @@
+export { MyFormRegister } from "./MyFormRegister"

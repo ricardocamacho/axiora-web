@@ -1,4 +1,4 @@
-import { MyFormRecord } from "@/component/FormRecord/MyFormRecord"
+import { MyFormRegister } from "@/component/FormRegister/MyFormRegister"
 import Link from "next/link"
 
 export default function Register(){
@@ -13,7 +13,7 @@ export default function Register(){
             Si ya eres miembro, por favor <Link href="/signin">inicia sesión</Link></p>
           </div>
           <div>
-            <MyFormRecord />
+            <MyFormRegister />
           </div>
         </div>
     </section>

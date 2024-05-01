@@ -2,7 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import "./module.css"
 
+const handelsubmit = (e) => {
+  e.preventDefaul()
+}
+
+
+
 export const MyForm = () => {
+
+ 
+
   return (
     <form className="form-container">
       <div>
@@ -18,14 +27,14 @@ export const MyForm = () => {
         <input type="password" id="password" name="password" />
       </div>
       <div className="links">
-          <Link href="/record" className="record">
-            Regístrate
-          </Link>
+        <Link href="/register" className="text-register">
+          Regístrate
+        </Link>
         <button>
           <Link href="/dashboard">
             INICIAR SESIÓN
           </Link>
-      </button>
+        </button>
       </div>
     </form>
   );

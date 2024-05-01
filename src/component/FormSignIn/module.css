@@ -4,7 +4,7 @@
   color: black;
   background-color: white;
   padding: 80px;
-  }
+}
 .bg-img{
   margin-bottom: 60px;
 }
@@ -21,7 +21,7 @@
   position: absolute;
   top: -8px;
   left: 10px;
-  font-size: 80%;
+  font-size: 70%;
   padding: 0 2px;
   background-color: white;
   color: #3a3a3ab3;
@@ -43,7 +43,6 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
-
 input:focus {
   border-color: #922c88;
 }
@@ -53,7 +52,7 @@ input:focus {
   justify-content: space-between;
   margin-top: 10px;
 }
-.links .record {
+.links .text-register {
   font-size: 12px;
   color: #3a3a3a;
 }
