@@ -6,12 +6,12 @@
     flex-direction: row-reverse;
     margin: auto;
     width: 100%;
-    border: 1px solid #fff;
   }
 
   & picture {
     display: flex;
     width: 100%;
+    max-width: 900px;
 
     & img {
       width: 100%;
@@ -20,11 +20,16 @@
 
   & div {
     width: 90%;
+    max-width: 600px;
     margin: auto;
     text-align: center;
-    
+
     @media screen and (min-width: 768px) {
-        border: 1px solid #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 2%;
     }
 
     & h1 {
@@ -38,21 +43,18 @@
       @media screen and (min-width: 768px) {
         font-size: 2.5rem;
         text-align: start;
-        border: 1px solid #000;
-        width: 50%;
+        width: 60%;
         line-height: 3rem;
       }
-
-
     }
 
     & p {
       text-align: left;
-      margin-top: 0;
-      color: #fff !important;
-      margin-bottom: 2rem !important;
-      font-size: 0.9rem;
+      color: #fff;
+      font-size: 1.1rem;
       line-height: 1.4rem;
+      width: 100%;
+      max-width: 350px;
     }
 
     & button {
@@ -61,8 +63,6 @@
       font-size: 0.8rem;
       color: #575057;
       background-color: #d4d4d4;
-      border-color: #d4d4d4;
-      line-height: 1.5;
       font-weight: 500;
       letter-spacing: 0.05rem;
       padding: 1rem 3.5rem 0.9rem;
@@ -79,4 +79,3 @@
   filter: blur(5px);
   transition: 0.5s ease-in-out;
 }
-

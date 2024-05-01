@@ -37,11 +37,7 @@
       align-items: center;
       flex-direction: column;
 
-      & img {
-        flex: 1;
-      }
-
-      & div {
+      & aside {
         & p, h4 {
           font-weight: 400;
           color: #909090;
@@ -51,9 +47,8 @@
         & h3 {
           text-align: start;
           font-weight: 500;
-          line-height: 1.2;
           color: #922c88;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -62,18 +57,19 @@
         flex-direction: column;
         justify-content: space-evenly;
         text-align: start;
-    
       }
     }
     & section:nth-child(1) {
       & .ejemplos {
         height: 200px;
       }
+
     }
     & section:nth-child(2) {
         & .ejemplos {
             height: 450px;
         }
+
     }
     & section:nth-child(3) {
         & .ejemplos {

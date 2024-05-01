@@ -24,13 +24,13 @@ const Menu: React.FC<MenuProps>  = () => {
       <nav className={menuOpen ? styles.navOpen : styles.navClosed}>
         <ul>
           <li>
-            <Link href={"#"}>Características</Link>
+            <Link href={"#"}>CARACTERÍSTICAS</Link>
           </li>
           <li>
-            <Link href={"#"}>Planes</Link>
+            <Link href={"#"}>PLANES</Link>
           </li>
           <li>
-            <Link href={"#"}>Ingresar</Link>
+            <Link href={"#"}>INGRESAR</Link>
           </li>
         </ul>
       </nav>

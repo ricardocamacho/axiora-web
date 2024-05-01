@@ -34,7 +34,7 @@ const MainContect: React.FC<MainProps> = () => {
       </picture>
 
       <div>
-        <h1>CONECTA TUS PLATAFORMAS DE E-COMMERCE</h1>
+        <h1>CONECTA TUS PLATAFORMAS <br></br>DE E-COMMERCE</h1>
         <p>
           Con Axiora puedes conectar tus plataformas de e-commerce <strong>Mercadolibre</strong>
           y <strong>Shopify</strong> sincronizando tus ventas e inventario en tiempo real.

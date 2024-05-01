@@ -26,7 +26,7 @@ const Caracteristicas: React.FC<FeaturesListProps> = () => {
         <main className={styles.caracteristicasContainer}>
           {data.map((feature, index) => (
             <section key={index}>
-              <div>
+              <aside>
                 <h3>{feature.h3}</h3>
                 <br></br>
                 <p>{feature.paragraph}</p>
@@ -35,7 +35,7 @@ const Caracteristicas: React.FC<FeaturesListProps> = () => {
                   <h4>{feature.two}</h4>
                   <h4>{feature.three}</h4>
                 </div>
-              </div>
+              </aside>
               <Image
                 src={feature.image}
                 alt={`Feature ${index}`}
