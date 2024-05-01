@@ -32,7 +32,7 @@ interface SliderProps {}
 
 const Carrusel: React.FC<SliderProps> = () => {
   return (
-    <section>
+    <section className={styles.carrusel}>
       <Swiper
         effect={"cards"}
         grabCursor={true}
