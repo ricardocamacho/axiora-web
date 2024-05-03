@@ -1,11 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 import data from "./data/slider.json";
-import "swiper/css";
-import "swiper/css/effect-cards";
 import styles from "../styles/index.module.scss";
 
 interface SliderData {
@@ -33,24 +29,11 @@ interface SliderProps {}
 const Carrusel: React.FC<SliderProps> = () => {
   return (
     <section className={styles.carrusel}>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[Pagination, Autoplay]}
-        className="mySwiper"
-        spaceBetween={15}
-        slidesPerView={1}
-        autoplay={{ delay: 3000 }}
-      >
-        {data.map((item, index) => (
-          <SwiperSlide key={index}>
-            <SlideItem data={item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {data.map((item, index) => (
+        <SlideItem  key={index} data={item} />
+      ))}
     </section>
   );
 };
 
 export default Carrusel;
-

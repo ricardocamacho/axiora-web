@@ -1,13 +1,8 @@
 @use "./components/Menu";
 @use "./components/Contect";
 @use "./components/Slider";
+@use "./components/Carrusel";
 @use "./components/Caracteristicas";
 @use "./components/Plan";
 @use "./components/Welcome";
 @use "./components/Footer";
-
-.carrusel {
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
