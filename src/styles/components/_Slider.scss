@@ -13,6 +13,7 @@
     }
 
     & .sliderContainer {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,6 +22,21 @@
         background: #fff;
         border-radius: 15px;
         padding: 2%;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/logos/black-axiora.svg");
+            background-repeat: no-repeat;
+            background-size: 500%;
+            background-position-x: -15%;
+            background-position-y: -55%;
+            opacity: 0.2;
+          }
 
         & img {
             width: 100px;

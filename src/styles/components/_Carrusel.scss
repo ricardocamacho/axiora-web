@@ -7,6 +7,7 @@
     & main {
       display: flex;
       flex-direction: column;
+      position: relative;
       justify-content: space-evenly;
       align-items: center;
       text-align: center;
@@ -20,7 +21,22 @@
 
       &:hover {
         transform: translate(0, -15px);
-        box-shadow: 0 20px 20px #000;
+        box-shadow: 0 20px 20px #1d1d1d;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/logos/black-axiora.svg");
+        background-repeat: no-repeat;
+        background-size: 500%;
+        background-position-x: -15%;
+        background-position-y: -55%;
+        opacity: 0.2;
       }
   
       & img {
@@ -37,7 +53,7 @@
           padding: 4%;
           font-weight: 400;
           font-size: .9rem;
-          color: #8f8f8f;
+          color: #000000;
       }
     }
   

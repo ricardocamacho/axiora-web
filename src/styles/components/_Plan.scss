@@ -47,18 +47,38 @@
           }
       
           & section {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             width: 100%;
+            max-width: 400px;
             height: 435px;
             box-shadow: 0 0 5px #000;
             padding: 1%;
+            margin: auto;
             transition: .5s ease-in-out;
 
             &:hover {
               box-shadow: 0 0 15px #000;
+              border-radius: 15px;
+              scale: 1.02;
+            }
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: url("/logos/black-axiora.svg");
+              background-repeat: no-repeat;
+              background-size: 500%;
+              background-position-x: -15%;
+              background-position-y: -55%;
+              opacity: 0.2;
             }
       
             & img {
@@ -76,14 +96,14 @@
             & h2 {
               font-weight: 400;
               font-size: 1.9rem;
-              color: #3a3a3a;
+              color: #070707;
               line-height: 1.4rem;
               text-align: center;
             }
             
             & p,p {
               font-weight: 400;
-              color: #909090;
+              color: #000000;
               font-size: .9rem;
               line-height: 1.4rem;
               text-align: center;

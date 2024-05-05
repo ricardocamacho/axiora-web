@@ -1,5 +1,5 @@
 import Image from "next/image";
-import data from "./data/planes.json";
+import data from "../data/planes.json";
 import styles from "../styles/index.module.scss";
 
 interface PlanesData {

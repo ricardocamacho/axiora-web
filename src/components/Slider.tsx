@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
-import data from "./data/slider.json";
+import data from "../data/slider.json";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import styles from "../styles/index.module.scss";

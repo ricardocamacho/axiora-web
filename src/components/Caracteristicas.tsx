@@ -1,5 +1,5 @@
 import Image from "next/image";
-import data from "./data/caracteristicas.json";
+import data from "../data/caracteristicas.json";
 import styles from "../styles/index.module.scss";
 
 interface FeatureData {
@@ -23,14 +23,14 @@ const Caracteristicas: React.FC<FeaturesListProps> = () => {
           <h4>Explora todas las características que Axiora te ofrece</h4>
           <br></br>
         </section>
-        <main className={styles.caracteristicasContainer}>
+        <main>
           {data.map((feature, index) => (
             <section key={index}>
               <aside>
                 <h3>{feature.h3}</h3>
                 <br></br>
                 <p>{feature.paragraph}</p>
-                <div className={styles.ejemplos}>
+                              <div>
                   <h4>{feature.one}</h4>
                   <h4>{feature.two}</h4>
                   <h4>{feature.three}</h4>
@@ -41,6 +41,7 @@ const Caracteristicas: React.FC<FeaturesListProps> = () => {
                 alt={`Feature ${index}`}
                 width={500}
                 height={600}
+                quality={100}
               />
               <br></br>
             </section>

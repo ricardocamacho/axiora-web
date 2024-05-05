@@ -18,7 +18,7 @@ const Menu: React.FC<MenuProps>  = () => {
   return (
     <header className={styles.menu}>
       <picture>
-        <Image src="https://e7.pngegg.com/pngimages/339/69/png-clipart-god-of-war-iii-god-of-war-ghost-of-sparta-ultimate-marvel-vs-capcom-3-god-text-logo.png" alt="logo" width={150} height={20} />
+        <Image src="/logos/white-full-axiora.svg" alt="logo" width={150} height={20} />
       </picture>
 
       <nav className={menuOpen ? styles.navOpen : styles.navClosed}>
