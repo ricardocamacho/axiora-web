@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className={styles.foot}>
         <section>
         <Image
-          src={"https://cdn-icons-png.flaticon.com/512/3659/3659802.png"}
+          src={"/logos/white-full-axiora.svg"}
           alt=""
           width={150}
           height={150}
