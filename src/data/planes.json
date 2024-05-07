@@ -1,6 +1,6 @@
 [
     {
-        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "image": "/icons/lite.Webp",
         "plan": "LITE",
         "h2": "GRATIS",
         "paragraph": "Hasta 500 USD en facturación por mes (de tus productos sincronizados)",
@@ -8,7 +8,7 @@
         "nameBtn": "EMPEZAR >"
     },
     {
-        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "image": "/icons/basic.Webp",
         "plan": "BASIC",
         "h2": "$9",
         "paragraph": "Mes / Hasta 1000 USD en facturación por mes (de tus productos sincronizados)",
@@ -16,7 +16,7 @@
         "nameBtn": "COMPRAR >"
     },
     {
-        "image": "https://cdn-icons-png.flaticon.com/512/3659/3659802.png",
+        "image": "/icons/plus.Webp",
         "plan": "PLUS",
         "h2": "$19",
         "paragraph": "Mes / Facturación ilimitada",

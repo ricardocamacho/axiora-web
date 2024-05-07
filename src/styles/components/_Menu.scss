@@ -13,17 +13,36 @@
     & .navOpen {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         flex-direction: column;
-        width: 100%;
-        height: 50vh;
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
         top: 90px;
-        left: 0;
+        left: -5%;
         background: #ffffff;
         box-shadow: inset 0 0 10px #220115;
         transition: .5s ease-in-out;
-        border-radius: 15px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/logos/black-axiora.svg");
+            background-repeat: no-repeat;
+            background-size: 500%;
+            background-position-x: -5%;
+            background-position-y: -55%;
+            opacity: 0.2;
+          }
+
+          & img {
+            transform: translate(0, 20px);
+        }
 
         & ul {
             display: flex;
@@ -31,7 +50,8 @@
             justify-content: space-evenly;
             flex-direction: column;
             width: 100%;
-            height: 70%;
+            height: 30%;
+           
           
     
             & li {
@@ -68,16 +88,15 @@
     & .navClosed {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         flex-direction: column;
-        width: 100%;
-        height: 50vh;
+        width: 10%;
+        height: 0vh;
         position: absolute;
         top: 90px;
         left: 150%;
         scale: 1;
-        transform: rotateY(90deg);
-        opacity: 1;
+        opacity: 0;
         background: #ffffff;
         transition: .5s ease-in-out;
 
@@ -91,6 +110,13 @@
             height: 90px;
             width: 450px;
             background: transparent;
+            justify-content: center;
+        }
+
+        & img {
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
         }
 
 
@@ -100,7 +126,7 @@
             justify-content: space-evenly;
             flex-direction: column;
             width: 100%;
-            height: 70%;
+            height: 30%;
 
             @media screen  and (min-width: 768px) {
                 flex-direction: row;

@@ -22,6 +22,9 @@ const Menu: React.FC<MenuProps>  = () => {
       </picture>
 
       <nav className={menuOpen ? styles.navOpen : styles.navClosed}>
+      <picture>
+        <Image  src="/logos/black-axiora.svg" alt="logo" width={150} height={20} />
+      </picture>
         <ul>
           <li>
             <Link href={"#"}>CARACTERÍSTICAS</Link>
