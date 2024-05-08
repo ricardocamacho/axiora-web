@@ -14,14 +14,10 @@ export default function Home() {
   <main>
     <DynamicMenu />
     <DynamicMain />
-    <br></br>
     <DynamicSlider />
     <DynamicCarrusel />
-    <br></br>
-    <br></br>
     <DynamicCaracteristicas data={[]} />
     <DynamicPlan data={[]} />
-    <br></br>
     <Dynamicwelcome />
     <DynamicFooter />
   </main>

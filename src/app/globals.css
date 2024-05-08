@@ -10,6 +10,7 @@ body {
   background-size: cover;
   height: 1000px;
   background-position-x: -300px;
+  min-height: 100vh;
 }
 
 

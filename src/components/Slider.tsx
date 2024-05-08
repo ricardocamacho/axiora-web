@@ -33,20 +33,22 @@ interface SliderProps {}
 const Slider: React.FC<SliderProps> = () => {
   return (
     <section className={styles.container}>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-        spaceBetween={15}
-        slidesPerView={1}
-      >
-        {data.map((item, index) => (
-          <SwiperSlide key={index}>
-            <SlideItem data={item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <section>
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper"
+          spaceBetween={15}
+          slidesPerView={1}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <SlideItem data={item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
     </section>
   );
 };

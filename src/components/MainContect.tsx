@@ -20,7 +20,7 @@ const MainContect: React.FC<MainProps> = () => {
   }, []);
 
   return (
-    <section className={styles.oneComponent}>
+    <section className={styles.MainContect}>
       <picture className={`${styles.open} ${menuOpen ? styles.closed : ""}`}>
         <source
           media="(min-width: 769px)"
@@ -38,12 +38,11 @@ const MainContect: React.FC<MainProps> = () => {
       <div>
         <h1>CONECTA TUS PLATAFORMAS <br></br>DE E-COMMERCE</h1>
         <p>
-          Con Axiora puedes conectar tus plataformas de e-commerce <strong>Mercadolibre</strong>
-          y <strong>Shopify</strong> sincronizando tus ventas e inventario en tiempo real.
+          Con Axiora puedes conectar tus plataformas de e-commerce <strong>Mercadolibre</strong> y <strong>Shopify</strong> sincronizando tus ventas e inventario en tiempo real.
           
            <br></br>
            <br></br>
-           <br></br>
+          
            Manten
           tu inventario sincronizado, entre dos o más cuentas de la misma o
           diferentes plataformas

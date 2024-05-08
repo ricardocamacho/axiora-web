@@ -4,8 +4,16 @@
   width: 90%;
   margin: auto;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    height: 1450px;
+  }
   
   & .title {
+
+    @media screen and (min-width: 768px) {
+      transform: translate(0, 35px);
+    }
     & h1 {
       text-align: center;
       font-weight: 500;
@@ -19,8 +27,7 @@
       font-weight: 400;
       text-align: center;
       color: #8f8f8f;
-      font-size: 0.9rem;
-      line-height: 1.4rem;
+      font-size: 1.1rem;
     }
   }
   & main {
@@ -74,14 +81,14 @@
 
     & section:nth-child(1) {
       & div {
-        height: 200px;
+        height: 150px;
       }
 
     }
 
     & section:nth-child(2) {
         & div {
-            height: 450px;
+            height: 350px;
 
             @media screen and (min-width: 768px) {
               height: 280px;
