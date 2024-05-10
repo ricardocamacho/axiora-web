@@ -26,7 +26,7 @@ const Plan: React.FC<PlanesListProps> = () => {
         <section className={styles.plan}>
           <main>
             {data.map((plan, index) => (
-              <section key={"index"}>
+              <section key={index}>
                 <Image
                   src={plan.image}
                   alt={`Plan ${index}`}

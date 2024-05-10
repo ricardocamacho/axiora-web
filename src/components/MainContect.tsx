@@ -3,7 +3,6 @@
 import { useContext, useEffect } from "react";
 import { useMenuContext } from "../context/MenuContext";
 import Image from "next/image";
-import imageUrl from "../data/imagesUrl.json";
 import styles from "../styles/index.module.scss";
 
 interface MainProps {}
@@ -30,8 +29,9 @@ const MainContect: React.FC<MainProps> = () => {
         <Image
           src={"/landing-page/home-hero-mobile.png"}
           alt="mobile"
-          width={600}
-          height={600}
+          // width={600}
+          // height={600}
+          fill
         />
       </picture>
 

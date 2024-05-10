@@ -10,16 +10,20 @@
     margin: auto;
     position: relative;
 
+    & img {
+        position: relative;
+        z-index: 1000;
+    }
+
     & .navOpen {
         display: flex;
         align-items: center;
-        justify-content: start;
         flex-direction: column;
         gap: 15px;
         width: 100vw;
         height: 100vh;
         position: absolute;
-        top: 90px;
+        top: 0px;
         left: -5%;
         background: #ffffff;
         box-shadow: inset 0 0 10px #220115;
@@ -40,10 +44,6 @@
             opacity: 0.2;
           }
 
-          & img {
-            transform: translate(0, 20px);
-        }
-
         & ul {
             display: flex;
             align-items: center;
@@ -51,16 +51,16 @@
             flex-direction: column;
             width: 100%;
             height: 30%;
+            transform: translate(0, 100px);
            
           
     
             & li {
                 text-decoration: none;
-                letter-spacing: 1px;
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.6rem;
-                color: #8f8f8f;
+                letter-spacing: 2px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #5f5e5e;
                 transition: .5s ease-in-out;
 
             }
@@ -90,10 +90,10 @@
         align-items: center;
         justify-content: start;
         flex-direction: column;
-        width: 10%;
-        height: 0vh;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
-        top: 90px;
+        top: 0px;
         left: 150%;
         scale: 1;
         opacity: 0;
@@ -101,22 +101,15 @@
         transition: .5s ease-in-out;
 
         @media screen  and (min-width: 768px){
-            left: 0%;
+            left: 20%;
             opacity: 1;
             scale: 1;
             top: 0;
-            transform: rotateY(0deg);
             position: relative;
             height: 90px;
             width: 450px;
             background: transparent;
             justify-content: center;
-        }
-
-        & img {
-            @media screen and (min-width: 768px) {
-                display: none;
-            }
         }
 
 
@@ -172,15 +165,22 @@
     }
 
 
+    & .icon {
+        position: relative;
+        z-index: 1000;
+        font-size: 1.7rem;
 
-    & button {
-        & .icon {
-            font-size: 1.7rem;
-        }
-
-        @media screen  and (min-width: 768px){
+        @media screen  and (min-width: 768px) {
             display: none;
         }
     }
+
+    & .iconBlack {
+        position: relative;
+        z-index: 1000;
+        font-size: 1.7rem;
+        color: #000;
+    }
+
 
   }

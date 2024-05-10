@@ -22,6 +22,12 @@
       &:hover {
         transform: translate(0, -15px);
         box-shadow: 0 20px 20px #1d1d1d60;
+
+        &::before {
+          background-position-x: -5%;
+          opacity: .6;
+        }
+
       }
 
       &:before {
@@ -36,8 +42,11 @@
         background-size: 500%;
         background-position-x: -15%;
         background-position-y: -55%;
-        opacity: 0.2;
+        opacity: .2;
+        transition: .5s ease-in-out;
       }
+
+
   
       & img {
         width: 70px;

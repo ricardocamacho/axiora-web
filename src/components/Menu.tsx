@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMenuContext } from "../context/MenuContext";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import Link from "next/link";
@@ -13,18 +13,26 @@ interface MenuProps {}
 
 const Menu: React.FC<MenuProps>  = () => {
   const { menuOpen, toggleMenu } = useMenuContext();
+  const [imageSrc, setImageSrc] = useState("/logos/white-full-axiora.svg");
+
+  useEffect(() => {
+    if (menuOpen) {
+      setTimeout(() => {
+        setImageSrc("/logos/black-axiora.svg");
+      }, 300);
+    } else {
+      setImageSrc("/logos/white-full-axiora.svg"); // Vuelve a la imagen original
+    }
+  }, [menuOpen]);
 
 
   return (
     <header className={styles.menu}>
       <picture>
-        <Image src="/logos/white-full-axiora.svg" alt="logo" width={150} height={20} />
+        <Image src={imageSrc} alt="logo" width={150} height={20} />
       </picture>
 
       <nav className={menuOpen ? styles.navOpen : styles.navClosed}>
-      <picture>
-        <Image  src="/logos/black-axiora.svg" alt="logo" width={150} height={20} />
-      </picture>
         <ul>
           <li>
             <Link href={"#"}>CARACTERÍSTICAS</Link>
@@ -39,7 +47,7 @@ const Menu: React.FC<MenuProps>  = () => {
       </nav>
 
       <button onClick={toggleMenu}>
-        {menuOpen ? <RiCloseLine className={styles.icon} /> : <RiMenuLine className={styles.icon} />}
+        {menuOpen ? <RiCloseLine className={menuOpen ? styles.iconBlack : styles.icon} /> : <RiMenuLine className={styles.icon} />}
       </button>
     </header>
   );
