@@ -1,17 +1,16 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
 import "./module.css"
 
-const handelsubmit = (e) => {
-  e.preventDefaul()
+
+const handelFormSubmit = (e) => {
+  e.preventDefault()
+  console.log("boton ", button)
 }
 
-
-
 export const MyForm = () => {
-
- 
-
   return (
     <form className="form-container">
       <div>
@@ -30,7 +29,7 @@ export const MyForm = () => {
         <Link href="/register" className="text-register">
           Regístrate
         </Link>
-        <button>
+        <button onClick={handelFormSubmit}>
           <Link href="/dashboard">
             INICIAR SESIÓN
           </Link>
