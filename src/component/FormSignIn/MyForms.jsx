@@ -4,12 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import "./module.css"
 
-
-const handelFormSubmit = (e) => {
-  e.preventDefault()
-  console.log("boton ", button)
-}
-
 export const MyForm = () => {
   return (
     <form className="form-container">
@@ -29,7 +23,7 @@ export const MyForm = () => {
         <Link href="/register" className="text-register">
           Regístrate
         </Link>
-        <button onClick={handelFormSubmit}>
+        <button>
           <Link href="/dashboard">
             INICIAR SESIÓN
           </Link>

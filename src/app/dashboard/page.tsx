@@ -1,16 +1,23 @@
 import Link from "next/link"
 
+
 export default function dashboard(){
     return (
-        <div>
-            <nav className="bg-blue-500 flex justify-end">
-                <ul className="flex-col">
-                    <li>User name</li>
-                    <Link href="/signin">
-                        cerrar sesión
-                    </Link>
-                </ul>
-            </nav>
-        </div>
+        <section className="main-container">
+            <div className="nav-content-main">
+            <h1 className="text-2xl text-[#3A3A3A]">Cuentas</h1>
+                <nav>
+                    <ul className="text-sm">
+                        <li>
+                            <Link href={''} className="text-[#3A3A3A]">Inicio</Link>
+                        </li>
+                        <li className="right-line text-[#6C757D]">Cuentas</li>
+                    </ul>
+                </nav>
+            </div>
+            <div className="separator my-5"></div>
+        </section>
+
+
     )
   };
