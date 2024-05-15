@@ -41,7 +41,7 @@ const Menu: React.FC<MenuProps>  = () => {
             <Link href={"#"}>PLANES</Link>
           </li>
           <li>
-            <Link href={"#"}>INGRESAR</Link>
+            <Link href={"/Login"}>INGRESAR</Link>
           </li>
         </ul>
       </nav>
