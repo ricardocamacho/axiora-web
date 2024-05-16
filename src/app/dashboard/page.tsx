@@ -5,7 +5,7 @@ export default function dashboard(){
     return (
         <section className="main-container">
             <div className="nav-content-main">
-            <h1 className="text-2xl text-[#3A3A3A]">Cuentas</h1>
+            <h1 className="text-3xl text-[#3A3A3A]">Cuentas</h1>
                 <nav>
                     <ul className="text-sm">
                         <li>

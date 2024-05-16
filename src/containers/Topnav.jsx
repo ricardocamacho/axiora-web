@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Topnav() {
   return (
-    <nav className="flex justify-between items-center h-24 px-12 bg-[#ffffff]">
+    <nav className="shadow-nav flex justify-between items-center h-24 px-12 bg-[#ffffff]">
       <div>🍔</div>
       <Link href="#">
         <Image
