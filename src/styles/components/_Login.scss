@@ -1,3 +1,127 @@
 .login_container {
-    border:  1px solid;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/login/balloon.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media screen and (min-width: 768px) {
+    background-image: url("/login/balloon-lg.jpg");
+  }
+
+  & section {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 650px;
+    box-shadow: 0 0 5px #000;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      max-width: 950px;
+    }
+
+    & figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10%;
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-image: url("/login/balloon.jpg");
+      background-position: 90% 5%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @media screen and (min-width: 768px) {
+        height: 100%;
+        width: 55%;
+        padding: 2%;
+      }
+
+      & h1 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 25px;
+      }
+
+      & p {
+        color: #fff;
+        font-size: 1.1rem;
+
+        @media screen and (min-width: 768px) {
+          transform: translate(0, -150px);
+        }
+      }
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 25px;
+      position: relative;
+      height: 400px;
+      padding: 10%;
+      background: #ffffff90;
+      color: #333232;
+
+      @media screen and (min-width: 768px) {
+        width: 700px;
+        height: 100%;
+      }
+
+      & .formGroup {
+        border: 1px solid #000;
+
+        & label {
+          position: absolute;
+          transform: translate(5px, 8px);
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .labelUp {
+          transform: translate(0, -17px);
+          font-size: 0.8rem;
+        }
+
+        & input {
+          width: 100%;
+          height: 40px;
+          background: transparent;
+        }
+      }
+
+      & .sesion_registor {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        & button {
+          border-radius: 50px;
+          background-color: #922c88;
+          border-color: #922c88;
+          color: #fff;
+          font-size: 0.9rem;
+          padding: 0.6rem 2.5rem;
+          position: relative;
+          transition: opacity 0.5s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #dd58d0;
+            box-shadow: inset 0 0 15px #922c88, inset 0 0 5px #000000;
+          }
+        }
+      }
+    }
+  }
 }

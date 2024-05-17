@@ -11,7 +11,7 @@ const DynamicFooter = dynamic(() => import("../components/Footer"));
 
 export default function Home() {
   return (
-  <main>
+  <main className="HeaderContainer">
     <DynamicMenu />
     <DynamicMain />
     <DynamicSlider />
