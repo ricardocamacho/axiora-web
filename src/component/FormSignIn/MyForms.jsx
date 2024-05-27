@@ -21,11 +21,9 @@ export const MyForm = () => {
         <Link href="/register" className="text-register">
           Regístrate
         </Link>
-        <button>
-          <Link href="/dashboard">
-            INICIAR SESIÓN
-          </Link>
-        </button>
+        <Link href="/dashboard" className="button">
+          INICIAR SESIÓN
+        </Link>
       </div>
     </form>
   );

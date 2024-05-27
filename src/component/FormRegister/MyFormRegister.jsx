@@ -18,12 +18,10 @@ export const MyFormRegister = () => {
         <input type="password" id="password" name="password" />
       </div>
       <div className="links">
-          <Link href="/register" className="record"></Link>
-        <button>
-          <Link href="/dashboard">
-            Regístrate
-          </Link>
-      </button>
+        <Link href="/register" className="record"></Link>
+        <Link href="/signin" className="button">
+          Regístrate
+        </Link>
       </div>
     </form>
   );
