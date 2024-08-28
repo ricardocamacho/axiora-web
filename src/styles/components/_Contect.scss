@@ -14,7 +14,8 @@
     display: flex;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 10;
+    transition: .5s ease-in-out;
 
     @media screen and (min-width: 768px) {
       width: 90%;
@@ -47,7 +48,6 @@
       font-size: 1.7rem;
 
       @media screen and (min-width: 768px) {
-        color: #fff;
         text-shadow: none;
         font-weight: 400;
         font-size: 2.2rem;
@@ -57,14 +57,14 @@
 
     & p {
       text-align: left;
-      color: #8f8f8f;
+      color: #494949;
       font-size: 1.1rem;
       line-height: 1.4rem;
       width: 100%;
       max-width: 350px;
 
       @media screen and (min-width: 768px) {
-        color: #ffff;
+        color: #ffffff;
       }
     }
 
@@ -96,6 +96,6 @@
   opacity: 1;
 }
 .closed {
-  filter: blur(5px);
+  opacity: 0;
   transition: 0.5s ease-in-out;
 }

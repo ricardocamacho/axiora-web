@@ -29,8 +29,6 @@ const MainContect: React.FC<MainProps> = () => {
         <Image
           src={"/landing-page/home-hero-mobile.png"}
           alt="mobile"
-          // width={600}
-          // height={600}
           fill
         />
       </picture>

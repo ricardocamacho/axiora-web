@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
+
   @media screen and (min-width: 768px) {
     background-image: url("/login/balloon-lg.jpg");
   }
@@ -24,7 +25,7 @@
       max-width: 950px;
     }
 
-    & figure {
+    & header {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -39,7 +40,7 @@
 
       @media screen and (min-width: 768px) {
         height: 100%;
-        width: 55%;
+        width: 450px;
         padding: 2%;
       }
 
@@ -62,65 +63,112 @@
       }
     }
 
-    & form {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      gap: 25px;
-      position: relative;
-      height: 400px;
-      padding: 10%;
-      background: #ffffff90;
-      color: #333232;
+
+    & div, aside {
+      width: 100%;
 
       @media screen and (min-width: 768px) {
-        width: 700px;
-        height: 100%;
+        width: 350px;
+        max-width: 600px;
+
       }
 
-      & .formGroup {
-        border: 1px solid #000;
-
-        & label {
-          position: absolute;
-          transform: translate(5px, 8px);
-          transition: transform 0.5s ease-in-out;
-        }
-
-        .labelUp {
-          transform: translate(0, -17px);
-          font-size: 0.8rem;
-        }
-
-        & input {
-          width: 100%;
-          height: 40px;
-          background: transparent;
-        }
-      }
-
-      & .sesion_registor {
+      & form {
         display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        align-items: center;
-
-        & button {
-          border-radius: 50px;
-          background-color: #922c88;
-          border-color: #922c88;
-          color: #fff;
-          font-size: 0.9rem;
-          padding: 0.6rem 2.5rem;
-          position: relative;
-          transition: opacity 0.5s ease-in-out;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #dd58d0;
-            box-shadow: inset 0 0 15px #922c88, inset 0 0 5px #000000;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 25px;
+        position: relative;
+        height: 400px;
+        padding: 10%;
+        background: #ffffff90;
+        color: #333232;
+  
+        @media screen and (min-width: 768px) {
+          width: 700px;
+          height: 100%;
+        }
+  
+        & .formGroup {
+          border: 1px solid #000;
+  
+          & label {
+            position: absolute;
+            transform: translate(5px, 8px);
+            transition: transform 0.5s ease-in-out;
+          }
+  
+          .labelUp {
+            transform: translate(0, -17px);
+            font-size: 0.8rem;
+          }
+  
+          & input {
+            width: 100%;
+            height: 40px;
+            background: transparent;
           }
         }
+  
+        & .sesion_registor {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          align-items: center;
+  
+          & button {
+            border-radius: 50px;
+            background-color: #922c88;
+            border-color: #922c88;
+            color: #fff;
+            font-size: 0.9rem;
+            padding: 0.6rem 2.5rem;
+            position: relative;
+            transition: opacity 0.5s ease-in-out;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: #dd58d0;
+              box-shadow: inset 0 0 15px #922c88, inset 0 0 5px #000000;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
+  & .registrationSuccess {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff50;
+
+    & p {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 500;
+      text-shadow: 0 10px 15px #000, 0 10px 15px #000;
+    }
+
+
+    & button {
+      border-radius: 50px;
+      background-color: #922c88;
+      border-color: #922c88;
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 0.6rem 2.5rem;
+      position: relative;
+      transition: opacity 0.5s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #dd58d0;
+        box-shadow: inset 0 0 15px #922c88, inset 0 0 5px #000000;
       }
     }
   }

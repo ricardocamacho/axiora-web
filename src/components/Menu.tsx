@@ -25,6 +25,12 @@ const Menu: React.FC<MenuProps>  = () => {
     }
   }, [menuOpen]);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className={styles.menu}>
@@ -35,10 +41,14 @@ const Menu: React.FC<MenuProps>  = () => {
       <nav className={menuOpen ? styles.navOpen : styles.navClosed}>
         <ul>
           <li>
-            <Link href={"#"}>CARACTERÍSTICAS</Link>
+          <button onClick={() => scrollToSection("caracteristicas")}>
+              CARACTERÍSTICAS
+            </button>
           </li>
           <li>
-            <Link href={"#"}>PLANES</Link>
+          <button onClick={() => scrollToSection("planes")}>
+              PLANES
+            </button>
           </li>
           <li>
             <Link href={"/Login"}>INGRESAR</Link>

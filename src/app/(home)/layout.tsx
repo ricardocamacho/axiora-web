@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { nunito } from "./fonts";
-import { MenuProvider } from "../context/MenuContext";
+import "../../styles/globals.scss";
+import { nunito } from "../fonts";
+import { MenuProvider } from "../../context/MenuContext";
 
 
 export const metadata: Metadata = {

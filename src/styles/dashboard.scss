@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body {
+    background: #fcf9f9;
+    background-image: url("/logos/white-full-axiora.svg");
+    background-repeat: no-repeat;
+          background-size: 200%;
+          background-position: -60% -30%;
+}
+
+.cuentas, .inventarios {
+    border-radius: 5%;
+    text-align: center;
+    color: #992c88;
+    position: absolute;
+    left: 15%;
+    top: 100px;
+    z-index: -10000;
+}
