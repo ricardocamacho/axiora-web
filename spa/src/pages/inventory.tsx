@@ -3,17 +3,19 @@
 
 import { useState } from 'react';
 import { NavLink } from "react-router";
-import { Alert, Breadcrumb, Button, Card, Label, TextInput } from "flowbite-react";
+import { Alert, Breadcrumb, Button, Card, Label, Spinner, TextInput } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import { HiHome } from "react-icons/hi";
 import Api from '../api';
 
 export default function InventoryPage() {
   const [alerts, setAlerts] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data: any) => {
     const alertsArray: any = [];
+    setLoading(true);
     Api.updateInventory(data.sku, Number(data.quantity)).then((response) => {
       if (response.mercadolibre) {
         response.mercadolibre.forEach((store: any) => {
@@ -47,6 +49,7 @@ export default function InventoryPage() {
         });
       }
       setAlerts(alertsArray);
+      setLoading(false);
     });
   };
 
@@ -60,7 +63,7 @@ export default function InventoryPage() {
       </Breadcrumb>
       <Card>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-row gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <div className='grow'>
               <div className="mb-2 block">
                 <Label htmlFor="sku" value="SKU" />
@@ -86,8 +89,9 @@ export default function InventoryPage() {
               {errors.quantity && <p className="text-sm text-red-600">{String(errors.quantity.message)}</p>}
             </div>
           </div>
-          <Button type="submit" gradientDuoTone="purpleToPink">Actualizar inventario</Button>
+          <Button type="submit" gradientDuoTone="purpleToPink" disabled={loading}>Actualizar inventario</Button>
         </form>
+        {loading && <div className='text-center'><Spinner color="purple" aria-label="Purple spinner example" size='xl' /></div>}
         {alerts !== null && alerts.length > 0
           ? alerts.map((alert: any, idx: number) => (
               <Alert color={alert.color} key={idx}>
