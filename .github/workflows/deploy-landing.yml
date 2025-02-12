@@ -46,3 +46,9 @@ jobs:
         working-directory: ./landing
         run: aws s3 sync ./build s3://dev.axiora.co --delete
         if: github.event.inputs.environment == 'development'
+      - name: Create CloudFront invalidation
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.LANDING_AWS_CF_DISTRIBUTION_ID }} --paths "/*"
+        if: github.event.inputs.environment == 'production'
+      - name: Create CloudFront invalidation (Development)
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DEV_LANDING_AWS_CF_DISTRIBUTION_ID }} --paths "/*"
+        if: github.event.inputs.environment == 'development'
