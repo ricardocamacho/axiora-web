@@ -1,3 +1,3 @@
-build/
-node_modules/
-src/serviceWorker.js
+landing/build/
+landing/node_modules/
+landing/src/serviceWorker.js
