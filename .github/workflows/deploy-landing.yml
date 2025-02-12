@@ -1,0 +1,48 @@
+name: Deploy Landing
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: Select Environment
+        options:
+        - development
+        - production
+
+jobs:
+  deploy-landing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "14.21.3"
+      - name: Install dependencies
+        working-directory: ./landing
+        run: npm ci
+      - name: Build
+        working-directory: ./landing
+        run: npm run build
+        if: github.event.inputs.environment == 'production'
+      - name: Build (Development)
+        working-directory: ./landing
+        run: npm run build:dev
+        if: github.event.inputs.environment == 'development'
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      - name: Deploy to AWS S3
+        working-directory: ./landing
+        run: aws s3 sync ./build s3://axiora.co --delete
+        if: github.event.inputs.environment == 'production'
+      - name: Deploy to AWS S3 (Development)
+        working-directory: ./landing
+        run: aws s3 sync ./build s3://dev.axiora.co --delete
+        if: github.event.inputs.environment == 'development'
