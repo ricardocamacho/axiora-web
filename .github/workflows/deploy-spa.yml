@@ -17,8 +17,10 @@ jobs:
         with:
           node-version: "20"
       - name: Install dependencies
+        working-directory: ./spa
         run: npm ci
       - name: Build
+        working-directory: ./spa
         run: npm run build
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -27,4 +29,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - name: Deploy to AWS S3
+        working-directory: ./spa
         run: aws s3 sync ./dist s3://app.axiora.co --delete
